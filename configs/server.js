@@ -4,6 +4,10 @@ import cors from 'cors'
 import helmet from 'helmet';
 import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
+import limiter from '../src/middlewares/validate-cant-request.js';
+import authRoutes from "../src/auth/auth.routes.js";
+import { createAdmin } from '../src/auth/auth.controller.js'
+
 
 const middlewares = (app) =>{
     app.use(express.urlencoded({extended: false}));
@@ -12,9 +16,15 @@ const middlewares = (app) =>{
     app.use(cors());
     app.use(helmet());
     app.use(morgan('dev'));
+    app.use(limiter);
+}
+
+const routes = (app) =>{
+    app.use('/coperex/v1/auth', authRoutes);
 }
 
 const conectarDB = async() =>{
+    
     try {
         await dbConnection();
         console.log('Successful connection to the database')
@@ -23,12 +33,15 @@ const conectarDB = async() =>{
     }
 }
 
+
 export const initServer = async() =>{
- const app = express();
- const port = process.env.PORT || 3001;
- try {
+    const app = express();
+    const port = process.env.PORT || 3000;
+    try {
      middlewares(app);
      conectarDB();
+     await createAdmin()
+     routes(app);
      app.listen(port);
      console.log(`server running on port ${port}`)
     
