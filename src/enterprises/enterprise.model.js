@@ -9,9 +9,9 @@ const EnterpriseSchema = Schema({
     impactLevel: {
         type: String,
         required: true,
-        enum: ["Profesional", "SemiProfesional", "Amateur"]
+        enum: ["Professional", "Semiprofessional", "Amateur"]
     },
-    experience: {
+    yearsExperience: {
         type: String,
         required: true,
     },
@@ -25,5 +25,6 @@ const EnterpriseSchema = Schema({
     versionKey: false
 }
 )
+
 
 export default model ("Enterprise", EnterpriseSchema)

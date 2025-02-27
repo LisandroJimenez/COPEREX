@@ -6,6 +6,7 @@ import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
 import limiter from '../src/middlewares/validate-cant-request.js';
 import authRoutes from "../src/auth/auth.routes.js";
+import enterpriseRoutes from "../src/enterprises/enterprise.routes.js"
 import { createAdmin } from '../src/auth/auth.controller.js'
 
 
@@ -21,6 +22,7 @@ const middlewares = (app) =>{
 
 const routes = (app) =>{
     app.use('/coperex/v1/auth', authRoutes);
+    app.use('/coperex/v1/enterprises', enterpriseRoutes)
 }
 
 const conectarDB = async() =>{
