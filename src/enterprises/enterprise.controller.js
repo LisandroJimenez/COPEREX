@@ -23,23 +23,29 @@ export const saveEnterprise = async (req, res) => {
 
 export const getEnterprise = async (req, res) => {
     try {
-        const { limit = 10, since = 0, sort = "name", order = "asc", category, yearsExperience } = req.query;
+        const { limit = 10, since = 0, order, category} = req.query;
 
-        const filters = {};
+        let filters = {};
+        
         if (category) {
-            filters.category = category; 
-        }
-        if (yearsExperience) {
-            filters.yearsExperience = { $gte: yearsExperience }; 
+            filters.category = { $regex: new RegExp(category, 'i') };        }
+        
+        let query = Enterprise.find(filters).skip(Number(since)).limit(Number(limit));
+        
+        if (order === "years") {
+            query = query.sort({ yearsExperience: -1 });
         }
 
-        const sortOrder = order === "desc" ? -1 : 1; 
-        const enterprises = await Enterprise.find(filters)
-            .skip(Number(since))
-            .limit(Number(limit))
-            .sort({ [sort]: sortOrder });
+        if (order === "asc") {
+            query = query.sort({ name: 1 }); 
+        }
 
-        const total = await Enterprise.countDocuments(filters);
+        if (order === "desc") {
+            query = query.sort({ name: -1 });
+        }
+
+        const enterprises = await query;
+        const total = await Enterprise.countDocuments({});
 
         res.status(200).json({
             success: true,

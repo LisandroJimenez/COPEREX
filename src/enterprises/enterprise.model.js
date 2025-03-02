@@ -12,7 +12,7 @@ const EnterpriseSchema = Schema({
         enum: ["Professional", "Semiprofessional", "Amateur"]
     },
     yearsExperience: {
-        type: String,
+        type: Number,
         required: true,
     },
     category: {
