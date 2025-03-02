@@ -13,7 +13,7 @@ export const generateReport = async (req, res) => {
         const workbook = new ExcelJS.Workbook();
         const worksheet = workbook.addWorksheet('Empresas');
         worksheet.columns = [
-            { header: 'Nombre', key: 'name', width: 25 },
+            { header: 'Nombre de la empresa', key: 'name', width: 25 },
             { header: 'Nivel de Impacto', key: 'impactLevel', width: 20 },
             { header: 'Años de Experiencia', key: 'yearsExperience', width: 20 },
             { header: 'Categoría', key: 'category', width: 25 },

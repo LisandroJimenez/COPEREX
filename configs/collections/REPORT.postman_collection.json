@@ -1,0 +1,32 @@
+{
+	"info": {
+		"_postman_id": "ed2ede0b-126a-4f5b-a34a-73ac9f4db656",
+		"name": "REPORT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42599664"
+	},
+	"item": [
+		{
+			"name": "Generate-Report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/coperex/v1/report/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coperex",
+						"v1",
+						"report",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

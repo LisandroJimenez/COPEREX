@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "67c456fb29893a1060c906cd"
+  },
+  "name": "Admin",
+  "surname": "admin",
+  "username": "ADMIN",
+  "email": "admin@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$cYLZioaVpTB2oayJLkahAA$CGKwCjHCo/EQv6PBleUO1CyIb/K0gvcJxuxAlFkz4kE",
+  "phone": "12345667",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-02T13:02:51.143Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-02T13:02:51.143Z"
+  }
+}]

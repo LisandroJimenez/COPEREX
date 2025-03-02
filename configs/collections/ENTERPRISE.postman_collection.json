@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "424eef1f-b388-4e17-8ce4-6524a82448d8",
+		"name": "ENTERPRISE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42599664"
+	},
+	"item": [
+		{
+			"name": "Save-Enterprise",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M0NTZmYjI5ODkzYTEwNjBjOTA2Y2QiLCJpYXQiOjE3NDA5MjA2MjYsImV4cCI6MTc0MDkyNDIyNn0.muQSaULhAunpLlPrKh0-xipS-44Jn9oOQKd1_-f_QrA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"JJC\",\r\n    //Amateur, Semiprofessional, Professional\r\n    \"impactLevel\": \"Amateur\",\r\n    \"yearsExperience\":0,\r\n    \"category\": \"Escolar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/coperex/v1/enterprises",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coperex",
+						"v1",
+						"enterprises"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Enterprises",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/coperex/v1/enterprises",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coperex",
+						"v1",
+						"enterprises"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Enterprises-ASC",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/coperex/v1/enterprises?order=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coperex",
+						"v1",
+						"enterprises"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Enterprise-DESC",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/coperex/v1/enterprises?order=desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coperex",
+						"v1",
+						"enterprises"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-EnterpriseByYearsOfTrajectory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/coperex/v1/enterprises?order=years",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coperex",
+						"v1",
+						"enterprises"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "years"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Enterprise-category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/coperex/v1/enterprises?category=escolar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coperex",
+						"v1",
+						"enterprises"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "escolar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update-Enterprise",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M0NTZmYjI5ODkzYTEwNjBjOTA2Y2QiLCJpYXQiOjE3NDA5MjI1NjAsImV4cCI6MTc0MDkyNjE2MH0.o2cFxO2NxNawqys3ctlfWH7X9liYEm0rcDDlhs12Zig",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    //si desea actualizar el nivel de impacto: Amateur, Semiprofessional, Professional\r\n    \"impactLevel\": \"Professional\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/coperex/v1/enterprises/67c4588d29893a1060c906ea",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coperex",
+						"v1",
+						"enterprises",
+						"67c4588d29893a1060c906ea"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

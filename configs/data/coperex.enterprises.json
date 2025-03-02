@@ -1,0 +1,75 @@
+[{
+  "_id": {
+    "$oid": "67c4573e29893a1060c906d3"
+  },
+  "name": "Municipalidad de Mixco",
+  "impactLevel": "Semiprofessional",
+  "yearsExperience": 12,
+  "category": "Municipalidad",
+  "createdAt": {
+    "$date": "2025-03-02T13:03:58.477Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-02T13:03:58.477Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c4576d29893a1060c906d8"
+  },
+  "name": "Enlasa S.A",
+  "impactLevel": "Semiprofessional",
+  "yearsExperience": 10,
+  "category": "Proveedores",
+  "createdAt": {
+    "$date": "2025-03-02T13:04:45.110Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-02T13:04:45.110Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c4579129893a1060c906db"
+  },
+  "name": "Instituto Fray Luis Rama",
+  "impactLevel": "Amateur",
+  "yearsExperience": 13,
+  "category": "Escolar",
+  "createdAt": {
+    "$date": "2025-03-02T13:05:21.464Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-02T13:05:21.464Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c4588d29893a1060c906ea"
+  },
+  "name": "Cargill",
+  "impactLevel": "Professional",
+  "yearsExperience": 39,
+  "category": "Proveedores",
+  "createdAt": {
+    "$date": "2025-03-02T13:09:33.626Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-02T13:38:55.719Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c45bbf5171c06fbbcc21ab"
+  },
+  "name": "JJC",
+  "impactLevel": "Amateur",
+  "yearsExperience": 0,
+  "category": "Escolar",
+  "createdAt": {
+    "$date": "2025-03-02T13:23:11.683Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-02T13:23:11.683Z"
+  }
+}]
